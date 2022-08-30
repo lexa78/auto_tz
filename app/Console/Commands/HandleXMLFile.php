@@ -58,7 +58,7 @@ class HandleXMLFile extends AbstractWorkWithXMLFile
                     );
                     $this->info(sprintf('Offer with id = %s is handled successfully', $item->id));
                 } else {
-                    $this->error($result);
+                    $this->error($result->getTextResponse());
                 }
             }
         } else {

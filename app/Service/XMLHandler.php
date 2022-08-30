@@ -244,9 +244,6 @@ class XMLHandler
             Catalog::where('id', $idForUpdate)->update($createOrUpdateData);
         }
 
-//        $idForDelete = array_diff(array_keys($this->supplierCatalogIdHandbook), $supplierCatalogIdFromXML);
-//        Catalog::whereIn('supplier_id', $idForDelete)->delete();
-
         return new XMLHandlerResponse(
             XMLFileHandler::OK_RESPONSE,
             $this->supplierCatalogIdHandbook,
